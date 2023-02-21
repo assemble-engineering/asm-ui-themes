@@ -1,0 +1,7 @@
+{
+  "name": "asm-ui-themes",
+  "version": "1.0.0",
+  "description": "container repo for asm-ui themes",
+  "main": "index.js",
+  "license": "MIT"
+}
