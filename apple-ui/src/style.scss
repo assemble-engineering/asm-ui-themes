@@ -1,10 +1,69 @@
-@import url('//www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Mono,v1|SF+Pro+Icons,v3');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./util/reset.css";
+@import "./util/css-variables.css";
+@import "./util/scss-variables.scss";
+
+@import url("//www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Mono,v1|SF+Pro+Icons,v3");
 
 .asm-button {
-  @apply btn;
+  background: var(--defaultButtonBgColor, $defaultButtonBgColor);
+  border: var(--defaultButtonBorder, $defaultButtonBorder);
+  color: var(--defaultButtonFontColor, $defaultButtonFontColor);
+  border-radius: var(--buttonBorderRadius, $buttonBorderRadius);
+  padding: var(--buttonPadding, $buttonPadding);
+
+  &:hover,
+  &:focus {
+    background: var(--defaultButtonHoverBgColor, $defaultButtonHoverBgColor);
+    border: var(--defaultButtonHoverBorder, $defaultButtonHoverBorder);
+    color: var(--defaultButtonHoverFontColor, $defaultButtonHoverFontColor);
+  }
+
+  &.asm-button-primary {
+    background: var(--primaryButtonBgColor, $primaryButtonBgColor);
+    border: var(--primaryButtonBorder, $primaryButtonBorder);
+    color: var(--primaryButtonFontColor, $primaryButtonFontColor);
+
+    &:hover,
+    &:focus {
+      background: var(--primaryButtonHoverBgColor, $primaryButtonHoverBgColor);
+      border: var(--primaryButtonHoverBorder, $primaryButtonHoverBorder);
+      color: var(--primaryButtonHoverFontColor, $primaryButtonHoverFontColor);
+    }
+  }
+
+  &.asm-button-basic {
+    background: var(--basicButtonBgColor, $basicButtonBgColor);
+    border: var(--basicButtonBorder, $basicButtonBorder);
+    color: var(--basicButtonFontColor, $basicButtonFontColor);
+
+    &:hover,
+    &:focus {
+      background: var(--basicButtonHoverBgColor, $basicButtonHoverBgColor);
+      border: var(--basicButtonHoverBorder, $basicButtonHoverBorder);
+      color: var(--basicButtonHoverFontColor, $basicButtonHoverFontColor);
+    }
+  }
+
+  &.asm-button-transparent {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: unset;
+    border-radius: 0;
+    font-size: unset;
+
+    &:hover,
+    &:focus {
+      background: none;
+      border: none;
+      color: unset;
+    }
+  }
+
+  .asm-button-child {
+    pointer-events: none;
+  }
 }
 
 .asm-checkbox {

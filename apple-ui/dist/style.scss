@@ -1,0 +1,684 @@
+@import url("//www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Mono,v1|SF+Pro+Icons,v3");
+
+/***
+    The new CSS reset - version 1.8.3 (last updated 21.1.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+
+pre {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+
+::-moz-placeholder {
+  color: unset;
+}
+
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+
+:where(dialog:modal) {
+  all: revert;
+}
+
+:focus {
+  outline: 1px solid #333;
+  outline-offset: 1px;
+}
+
+:focus-visible {
+  outline: 1px solid #333;
+  outline-offset: 1px;
+}
+
+:root {
+  /* Global */
+  --borderRadius: 5px;
+  --padding: 10px;
+  --dividerColor: #333;
+  --border: 1px solid #666;
+  /* Buttons */
+  --buttonPadding: 8px 12px;
+  --buttonBorderRadius: var(--borderRadius);
+  --defaultButtonBgColor: #0000ff80;
+  --defaultButtonFontColor: #ddd;
+  --defaultButtonBorder: none;
+  --defaultButtonHoverBgColor: #0000ff90;
+  --defaultButtonHoverFontColor: #ddd;
+  --defaultButtonHoverBorder: none;
+  --primaryButtonBgColor: #ddd;
+  --primaryButtonFontColor: #333;
+  --primaryButtonBorder: 1px solid #0000ff80;
+  --primaryButtonHoverBgColor: #0000ff10;
+  --primaryButtonHoverFontColor: #333;
+  --primaryButtonHoverBorder: 1px solid #0000ff90;
+  --basicButtonBgColor:  #0000ff30;
+  --basicButtonFontColor: #333;
+  --basicButtonBorder: none;
+  --basicButtonHoverBgColor: #0000ff40;
+  --basicButtonHoverFontColor: #333;
+  --basicButtonHoverBorder: none;
+  /* Font */
+  --headingTopMargin: .5rem;
+  --headingBottomMargin: 1rem;
+  --headingFontColor: #333;
+  --h1FontSize: 3.5rem;
+  --h2FontSize: 2.75rem;
+  --h3FontSize: 2.25rem;
+  --h4FontSize: 2rem;
+  --h5FontSize: 1.75rem;
+  --h6FontSize: 1.5rem;
+  --bodyLineHeight: 1.25;
+  --bodyFontSize: 1rem;
+  --bodyFontColor: #333;
+  --codeFontSize: .875rem;
+  --captionFontSize: .875rem;
+  /* Icons */
+  --miniIconSize: 16px;
+  --tinyIconSize: 20px;
+  --smallIconSize: 24px;
+  --largeIconSize: 32px;
+  --bigIconSize: 40px;
+  --hugeIconSize: 56px;
+  --massiveIconSize: 80px;
+  /* Inputs */
+  --labelFontColor: #333;
+  --labelMargin: 0 0 3px 0;
+  --inputBgColor: #ddd;
+  --inputPadding: 8px 12px;
+  --inputBorder: 1px solid #666;
+  --inputFocusBorder: 1px solid #333;
+  --inputFontColor: #333;
+  --inputDisabledBgColor: #ddd;
+  --checkboxBgColor: #0000ff80;
+  --checkboxCheckColor: #ddd;
+  /* Alerts */
+  --alertPadding: 8px 12px;
+  --warningBgColor: rgba(255, 255, 0, .25);
+  --warningFontColor: #b2b200;
+  --successBgColor: rgba(0, 255, 0, .25);
+  --successFontColor: #009900;
+  --errorBgColor: rgba(255, 0, 0, .25);
+  --errorFontColor: #ff0000;
+  --infoBgColor: rgb(0, 0, 255, .25);
+  --infoFontColor: #0000ff;
+  /* // Modal */
+  --modalPadding: 80px 20px 20px;
+  --modalBgColor: #ddd;
+  --modalOverlayBgColor: rgba(51, 51, 51, .6);
+  --modalCloseButtonBgColor: var(--defaultButtonBgColor);
+  --modalCloseButtonBorder: var(--defaultButtonBorder);
+  --modalCloseButtonHoverBorder:var(--defaultButtonBorder);
+  --modalCloseButtonFontColor: var(--defaultButtonFontColor);
+  --modalCloseButtonHoverBgColor: var(--defaultButtonHoverBgColor);
+  --modalCloseButtonHoverFontColor: var(--defaultButtonHoverFontColor);
+  /* Table */
+  --tablePadding: 5px 10px;
+  --tableBorder: 1px solid #666;
+  /* Divider */
+  --dividerBorder: var(--border);
+  --dividerMargin: 1rem;
+  /* Iframe */
+  --iframeBorder: var(--border);
+}
+
+/* Fallback values for CSS variables
+This pattern allows us a simple way
+to overwrite the default stylesheets
+variable definitions by defining a CSS variable
+to a value that does not exist by supplying
+these variables as fallback values
+
+To overwrite them, simply add a file with
+the variables in css-variables.css to your repo */
+
+/* Global */
+
+$borderRadius: 5px;
+
+$padding: 10px;
+
+$dividerColor: #333;
+
+$border: 1px solid #666;
+
+/* Buttons */
+
+$buttonPadding: 8px 12px;
+
+$buttonBorderRadius: $borderRadius;
+
+$defaultButtonBgColor: #0000ff80;
+
+$defaultButtonFontColor: #ddd;
+
+$defaultButtonBorder: none;
+
+$defaultButtonHoverBgColor: #0000ff90;
+
+$defaultButtonHoverFontColor: #ddd;
+
+$defaultButtonHoverBorder: none;
+
+$primaryButtonBgColor: #ddd;
+
+$primaryButtonFontColor: #333;
+
+$primaryButtonBorder: 1px solid #0000ff80;
+
+$primaryButtonHoverBgColor: #0000ff10;
+
+$primaryButtonHoverFontColor: #333;
+
+$primaryButtonHoverBorder: 1px solid #0000ff90;
+
+$basicButtonBgColor: #0000ff30;
+
+$basicButtonFontColor: #333;
+
+$basicButtonBorder: none;
+
+$basicButtonHoverBgColor: #0000ff40;
+
+$basicButtonHoverFontColor: #333;
+
+$basicButtonHoverBorder: none;
+
+/* Font */
+
+$headingTopMargin: 0.5rem;
+
+$headingBottomMargin: 1rem;
+
+$headingFontColor: #333;
+
+$h1FontSize: 3.5rem;
+
+$h2FontSize: 2.75rem;
+
+$h3FontSize: 2.25rem;
+
+$h4FontSize: 2rem;
+
+$h5FontSize: 1.75rem;
+
+$h6FontSize: 1.5rem;
+
+$bodyLineHeight: 1.25;
+
+$bodyFontSize: 1rem;
+
+$bodyFontColor: #333;
+
+$codeFontSize: 0.875rem;
+
+$captionFontSize: 0.875rem;
+
+/* Icons */
+
+$miniIconSize: 16px;
+
+$tinyIconSize: 20px;
+
+$smallIconSize: 24px;
+
+$largeIconSize: 32px;
+
+$bigIconSize: 40px;
+
+$hugeIconSize: 56px;
+
+$massiveIconSize: 80px;
+
+/* Inputs */
+
+$labelFontColor: #333;
+
+$labelMargin: 0 0 3px 0;
+
+$inputPadding: 8px 12px;
+
+$inputBgColor: #ddd;
+
+$inputBorder: 1px solid #666;
+
+$inputFocusBorder: 1px solid #333;
+
+$inputFontColor: #333;
+
+$inputDisabledBgColor: #ddd;
+
+$checkboxBgColor: #0000ff80;
+
+$checkboxCheckColor: #ddd;
+
+/* Alerts */
+
+$alertPadding: 8px 12px;
+
+$warningBgColor: rgba(255, 255, 0, 0.25);
+
+$warningFontColor: #b2b200;
+
+$successBgColor: rgba(0, 255, 0, 0.25);
+
+$successFontColor: #009900;
+
+$errorBgColor: rgba(255, 0, 0, 0.25);
+
+$errorFontColor: #ff0000;
+
+$infoBgColor: rgb(0, 0, 255, 0.25);
+
+$infoFontColor: #0000ff;
+
+/* Modal */
+
+$modalPadding: 80px 20px 20px;
+
+$modalBgColor: #ddd;
+
+$modalOverlayBgColor: rgba(51, 51, 51, 0.6);
+
+$modalCloseButtonBgColor: $defaultButtonBgColor;
+
+$modalCloseButtonBorder: $defaultButtonBorder;
+
+$modalCloseButtonHoverBorder: $defaultButtonBorder;
+
+$modalCloseButtonFontColor: $defaultButtonFontColor;
+
+$modalCloseButtonHoverBgColor: $defaultButtonHoverBgColor;
+
+$modalCloseButtonHoverFontColor: $defaultButtonHoverFontColor;
+
+/* Table */
+
+$tablePadding: 5px 10px;
+
+$tableBorder: 1px solid #666;
+
+/* Divider */
+
+$dividerBorder: $border;
+
+$dividerMargin: 1rem;
+
+/* Iframe */
+
+$iframeBorder: $border;
+
+.asm-button {
+  background: var(--defaultButtonBgColor, $defaultButtonBgColor);
+  border: var(--defaultButtonBorder, $defaultButtonBorder);
+  color: var(--defaultButtonFontColor, $defaultButtonFontColor);
+  border-radius: var(--buttonBorderRadius, $buttonBorderRadius);
+  padding: var(--buttonPadding, $buttonPadding);
+  &:hover,
+  &:focus {
+    background: var(--defaultButtonHoverBgColor, $defaultButtonHoverBgColor);
+    border: var(--defaultButtonHoverBorder, $defaultButtonHoverBorder);
+    color: var(--defaultButtonHoverFontColor, $defaultButtonHoverFontColor);
+  }
+  &.asm-button-primary {
+    background: var(--primaryButtonBgColor, $primaryButtonBgColor);
+    border: var(--primaryButtonBorder, $primaryButtonBorder);
+    color: var(--primaryButtonFontColor, $primaryButtonFontColor);
+    &:hover,
+    &:focus {
+      background: var(--primaryButtonHoverBgColor, $primaryButtonHoverBgColor);
+      border: var(--primaryButtonHoverBorder, $primaryButtonHoverBorder);
+      color: var(--primaryButtonHoverFontColor, $primaryButtonHoverFontColor);
+    }
+  }
+  &.asm-button-basic {
+    background: var(--basicButtonBgColor, $basicButtonBgColor);
+    border: var(--basicButtonBorder, $basicButtonBorder);
+    color: var(--basicButtonFontColor, $basicButtonFontColor);
+    &:hover,
+    &:focus {
+      background: var(--basicButtonHoverBgColor, $basicButtonHoverBgColor);
+      border: var(--basicButtonHoverBorder, $basicButtonHoverBorder);
+      color: var(--basicButtonHoverFontColor, $basicButtonHoverFontColor);
+    }
+  }
+  &.asm-button-transparent {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: unset;
+    border-radius: 0;
+    font-size: unset;
+    &:hover,
+    &:focus {
+      background: none;
+      border: none;
+      color: unset;
+    }
+  }
+  .asm-button-child {
+    pointer-events: none;
+  }
+}
+
+.label + .asm-checkbox{
+  margin-top: 0.75rem;
+}
+
+.asm-checkbox{
+  display: inline-flex;
+  align-items: center;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.asm-checkbox .label{
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.asm-checkbox input{
+  cursor: pointer;
+}
+
+.asm-checkbox input[type="checkbox"]{
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(var(--fill));
+  border-width: 1px;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+
+.asm-checkbox input[type="checkbox"]:disabled,.asm-checkbox input[type="checkbox"]:disabled:checked{
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.asm-checkbox input[type="checkbox"]:checked{
+  background-color: rgba(var(--fill-primary, var(--primary)));
+  border-color: rgba(var(--fill-primary, var(--primary)));
+  position: relative;
+  box-shadow: none;
+}
+
+.asm-checkbox input[type="checkbox"]:checked::after{
+  font-family: "SF Pro Icons";
+  font-size: 0.875rem;
+  position: absolute;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-align: center;
+  content: "";
+  color: #fff;
+  left: -1px;
+  top: -2px;
+}
+
+.asm-checkbox input[type="checkbox"]:focus{
+  box-shadow: 0 0 0 3px rgba(var(--fill-primary, var(--primary)), 0.35);
+  border-color: rgba(var(--fill-primary, var(--primary)));
+  outline: 0;
+}
+
+.asm-checkbox input[type="checkbox"]:disabled:checked{
+  background-color: rgba(var(--fill-gray-secondary));
+  border-color: rgba(var(--fill-gray-secondary));
+}
+
+.asm-checkbox.disabled{
+  cursor: not-allowed;
+}
+
+.asm-checkbox.disabled .label{
+  border-color: rgba(var(--fill-gray-secondary));
+  color: rgba(var(--glyph-gray-tertiary));
+  cursor: not-allowed;
+}
+
+.asm-input{
+  font-size: 1rem;
+  color: rgba(var(--glyph-gray));
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  line-height: 1.25rem;
+  background-color: rgba(var(--fill));
+  border-width: 1px;
+  border-radius: 6px;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.asm-input::-moz-placeholder{
+  color: rgba(var(--glyph-gray-tertiary));
+}
+
+.asm-input::placeholder{
+  color: rgba(var(--glyph-gray-tertiary));
+}
+
+.asm-input:disabled{
+  opacity: .4;
+  background-color: rgba(var(--fill-tertiary));
+  cursor: not-allowed;
+}
+
+.asm-input:focus{
+  border-color: rgba(var(--fill-primary, var(--primary)));
+  box-shadow: 0 0 0 3px rgba(var(--fill-primary, var(--primary)), 0.5);
+  outline: 0;
+}
+
+.asm-input:-moz-read-only{
+  background-color: rgba(var(--fill-tertiary));
+}
+
+.asm-input:read-only{
+  background-color: rgba(var(--fill-tertiary));
+}
+
+.asm-input.error{
+  border-color: rgba(var(--fill-red));
+  background-color: rgba(var(--fill-red-secondary));
+}
+
+.asm-input.error:focus{
+  box-shadow: 0 0 0 3px rgba(227, 0, 0, 0.35);
+  outline: 0;
+}
+
+.input-search .asm-input{
+  padding-left: 2.2rem;
+}
+
+.input-search.input-search-sm .asm-input{
+  font-size: 0.75rem;
+  padding-left: 1.8rem;
+  padding-right: 0.5rem;
+  line-height: 1rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  height: 1.5rem;
+}
+
+.select .asm-input{
+  display: block;
+  width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: rgba(var(--fill));
+  border-radius: 6px;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.select-sm .asm-input{
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.asm-label{
+  color: rgba(var(--glyph-gray));
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.asm-label + .checkbox,.asm-label + .radio{
+  margin-top: 0.75rem;
+}
+
+.checkbox .asm-label, .radio .asm-label{
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.checkbox.disabled .asm-label, .radio.disabled .asm-label{
+  border-color: rgba(var(--fill-gray-secondary));
+  color: rgba(var(--glyph-gray-tertiary));
+  cursor: not-allowed;
+}
+
+.asm-modal{
+  border-color: rgba(var(--fill-gray-quaternary));
+  border-radius: 12px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  background-color: rgba(var(--fill));
+  border-width: 1px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.asm-spinner{
+  animation: spin 1s linear infinite;
+  border-radius: 9999px;
+}
