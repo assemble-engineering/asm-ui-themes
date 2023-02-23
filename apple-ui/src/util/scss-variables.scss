@@ -15,8 +15,12 @@ $dividerColor: #333;
 $border: 1px solid #666;
 
 /* Buttons */
-$buttonPadding: 8px 12px;
-$buttonBorderRadius: $borderRadius;
+$buttonPadding: 8px 16px;
+$buttonBorderRadius: 980px;
+$buttonFontSize: 17px;
+$buttonMinWidth: 28px;
+$buttonLetterSpacing: -0.022em;
+$buttonLineHeight: 1.1764805882;
 
 $defaultButtonBgColor: #0000ff80;
 $defaultButtonFontColor: #ddd;
@@ -33,6 +37,14 @@ $primaryButtonBorder: 1px solid #0000ff80;
 $primaryButtonHoverBgColor: #0000ff10;
 $primaryButtonHoverFontColor: #333;
 $primaryButtonHoverBorder: 1px solid #0000ff90;
+
+$primaryNeutralButtonBgColor: #1d1d1f;
+$primaryNeutralButtonFontColor: #fff;
+$primaryNeutralButtonBorder: none;
+
+$primaryNeutralButtonHoverBgColor: #272729;
+$primaryNeutralButtonHoverFontColor: #fff;
+$primaryNeutralButtonHoverBorder: none;
 
 $basicButtonBgColor: #0000ff30;
 $basicButtonFontColor: #333;
@@ -72,14 +84,17 @@ $massiveIconSize: 80px;
 $labelFontColor: #333;
 $labelMargin: 0 0 3px 0;
 
-$inputPadding: 8px 12px;
-$inputBgColor: #ddd;
-$inputBorder: 1px solid #666;
+$inputPadding: 20px;
+$inputBgColor: white;
+$inputBorder: 1px solid #c7c7c7;
 $inputFocusBorder: 1px solid #333;
 $inputFontColor: #333;
 $inputDisabledBgColor: #ddd;
 $checkboxBgColor: #0000ff80;
 $checkboxCheckColor: #ddd;
+$inputWidth: 500px;
+$inputBorderRadius: 10px;
+$inputPlaceholderColor: #8c8c91;
 
 /* Alerts */
 $alertPadding: 8px 12px;
@@ -94,12 +109,13 @@ $infoFontColor: #0000ff;
 
 /* Modal */
 $modalPadding: 80px 20px 20px;
+$modalBorderRadius: 20px;
 $modalBgColor: #ddd;
 $modalOverlayBgColor: rgba(51, 51, 51, 0.6);
-$modalCloseButtonBgColor: $defaultButtonBgColor;
-$modalCloseButtonBorder: $defaultButtonBorder;
+$modalCloseButtonBgColor: #e8e8ed;
+$modalCloseButtonBorder: #e8e8ed;
 $modalCloseButtonHoverBorder: $defaultButtonBorder;
-$modalCloseButtonFontColor: $defaultButtonFontColor;
+$modalCloseButtonFontColor: black;
 $modalCloseButtonHoverBgColor: $defaultButtonHoverBgColor;
 $modalCloseButtonHoverFontColor: $defaultButtonHoverFontColor;
 

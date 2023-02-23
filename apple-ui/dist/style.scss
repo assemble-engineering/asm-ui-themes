@@ -138,26 +138,36 @@ pre {
   --dividerColor: #333;
   --border: 1px solid #666;
   /* Buttons */
-  --buttonPadding: 8px 12px;
-  --buttonBorderRadius: var(--borderRadius);
-  --defaultButtonBgColor: #0000ff80;
-  --defaultButtonFontColor: #ddd;
+  --buttonPadding: 8px 16px;
+  --buttonBorderRadius: 980px;
+  --buttonFontSize: 17px;
+  --buttonMinWidth: 28px;
+  --buttonLetterSpacing: -0.022em;
+  --buttonLineHeight: 1.1764805882;
+  --defaultButtonBgColor: #0071e3;
+  --defaultButtonFontColor: #fff;
   --defaultButtonBorder: none;
-  --defaultButtonHoverBgColor: #0000ff90;
-  --defaultButtonHoverFontColor: #ddd;
+  --defaultButtonHoverBgColor: #006edb;
+  --defaultButtonHoverFontColor: #fff;
   --defaultButtonHoverBorder: none;
-  --primaryButtonBgColor: #ddd;
-  --primaryButtonFontColor: #333;
-  --primaryButtonBorder: 1px solid #0000ff80;
-  --primaryButtonHoverBgColor: #0000ff10;
-  --primaryButtonHoverFontColor: #333;
-  --primaryButtonHoverBorder: 1px solid #0000ff90;
-  --basicButtonBgColor:  #0000ff30;
-  --basicButtonFontColor: #333;
-  --basicButtonBorder: none;
-  --basicButtonHoverBgColor: #0000ff40;
-  --basicButtonHoverFontColor: #333;
-  --basicButtonHoverBorder: none;
+  --primaryButtonBgColor: #0071e3;
+  --primaryButtonFontColor: #fff;
+  --primaryButtonBorder: none;
+  --primaryButtonHoverBgColor: #006edb;
+  --primaryButtonHoverFontColor: #fff;
+  --primaryButtonHoverBorder: none;
+  --primaryNeutralButtonBgColor: #1d1d1f;
+  --primaryNeutralButtonFontColor: #fff;
+  --primaryNeutralButtonBorder: none;
+  --primaryNeutralButtonHoverBgColor: #272729;
+  --primaryNeutralButtonHoverFontColor: #fff;
+  --primaryNeutralButtonHoverBorder: none;
+  --basicButtonBgColor:  #f5f5f7;
+  --basicButtonFontColor: #000;
+  --basicButtonBorder: 1px solid #fff;
+  --basicButtonHoverBgColor: #fff;
+  --basicButtonHoverFontColor: #000;
+  --basicButtonHoverBorder: 1px solid #fff;
   /* Font */
   --headingTopMargin: .5rem;
   --headingBottomMargin: 1rem;
@@ -184,14 +194,17 @@ pre {
   /* Inputs */
   --labelFontColor: #333;
   --labelMargin: 0 0 3px 0;
-  --inputBgColor: #ddd;
-  --inputPadding: 8px 12px;
-  --inputBorder: 1px solid #666;
+  --inputBgColor: white;
+  --inputPadding: 20px;
+  --inputBorder: 1px solid #c7c7c7;
   --inputFocusBorder: 1px solid #333;
   --inputFontColor: #333;
   --inputDisabledBgColor: #ddd;
   --checkboxBgColor: #0000ff80;
   --checkboxCheckColor: #ddd;
+  --inputWidth: 500px;
+  --inputBoderRadius: 10px;
+  --inputPlaceholderColor: #8C8C91;
   /* Alerts */
   --alertPadding: 8px 12px;
   --warningBgColor: rgba(255, 255, 0, .25);
@@ -204,12 +217,13 @@ pre {
   --infoFontColor: #0000ff;
   /* // Modal */
   --modalPadding: 80px 20px 20px;
-  --modalBgColor: #ddd;
+  --modalBgColor: white;
+  --modalBorderRadius: 20px;
   --modalOverlayBgColor: rgba(51, 51, 51, .6);
-  --modalCloseButtonBgColor: var(--defaultButtonBgColor);
-  --modalCloseButtonBorder: var(--defaultButtonBorder);
+  --modalCloseButtonBgColor: #e8e8ed;
+  --modalCloseButtonBorder: #e8e8ed;
   --modalCloseButtonHoverBorder:var(--defaultButtonBorder);
-  --modalCloseButtonFontColor: var(--defaultButtonFontColor);
+  --modalCloseButtonFontColor: black;
   --modalCloseButtonHoverBgColor: var(--defaultButtonHoverBgColor);
   --modalCloseButtonHoverFontColor: var(--defaultButtonHoverFontColor);
   /* Table */
@@ -244,9 +258,17 @@ $border: 1px solid #666;
 
 /* Buttons */
 
-$buttonPadding: 8px 12px;
+$buttonPadding: 8px 16px;
 
-$buttonBorderRadius: $borderRadius;
+$buttonBorderRadius: 980px;
+
+$buttonFontSize: 17px;
+
+$buttonMinWidth: 28px;
+
+$buttonLetterSpacing: -0.022em;
+
+$buttonLineHeight: 1.1764805882;
 
 $defaultButtonBgColor: #0000ff80;
 
@@ -271,6 +293,18 @@ $primaryButtonHoverBgColor: #0000ff10;
 $primaryButtonHoverFontColor: #333;
 
 $primaryButtonHoverBorder: 1px solid #0000ff90;
+
+$primaryNeutralButtonBgColor: #1d1d1f;
+
+$primaryNeutralButtonFontColor: #fff;
+
+$primaryNeutralButtonBorder: none;
+
+$primaryNeutralButtonHoverBgColor: #272729;
+
+$primaryNeutralButtonHoverFontColor: #fff;
+
+$primaryNeutralButtonHoverBorder: none;
 
 $basicButtonBgColor: #0000ff30;
 
@@ -336,11 +370,11 @@ $labelFontColor: #333;
 
 $labelMargin: 0 0 3px 0;
 
-$inputPadding: 8px 12px;
+$inputPadding: 20px;
 
-$inputBgColor: #ddd;
+$inputBgColor: white;
 
-$inputBorder: 1px solid #666;
+$inputBorder: 1px solid #c7c7c7;
 
 $inputFocusBorder: 1px solid #333;
 
@@ -351,6 +385,12 @@ $inputDisabledBgColor: #ddd;
 $checkboxBgColor: #0000ff80;
 
 $checkboxCheckColor: #ddd;
+
+$inputWidth: 500px;
+
+$inputBorderRadius: 10px;
+
+$inputPlaceholderColor: #8c8c91;
 
 /* Alerts */
 
@@ -376,17 +416,19 @@ $infoFontColor: #0000ff;
 
 $modalPadding: 80px 20px 20px;
 
+$modalBorderRadius: 20px;
+
 $modalBgColor: #ddd;
 
 $modalOverlayBgColor: rgba(51, 51, 51, 0.6);
 
-$modalCloseButtonBgColor: $defaultButtonBgColor;
+$modalCloseButtonBgColor: #e8e8ed;
 
-$modalCloseButtonBorder: $defaultButtonBorder;
+$modalCloseButtonBorder: #e8e8ed;
 
 $modalCloseButtonHoverBorder: $defaultButtonBorder;
 
-$modalCloseButtonFontColor: $defaultButtonFontColor;
+$modalCloseButtonFontColor: black;
 
 $modalCloseButtonHoverBgColor: $defaultButtonHoverBgColor;
 
@@ -408,12 +450,40 @@ $dividerMargin: 1rem;
 
 $iframeBorder: $border;
 
+.asm-alert {
+  width: 100%;
+  padding: var(--alertPadding, $alertPadding);
+  border-radius: var(--borderRadius, $borderRadius);
+  margin: 0 auto;
+  text-align: center;
+  &.warn {
+    background: var(--warningBgColor, $warningBgColor);
+    color: var(--warningFontColor, $warningFontColor);
+  }
+  &.error {
+    background: var(--errorBgColor, $errorBgColor);
+    color: var(--errorFontColor, $errorFontColor);
+  }
+  &.success {
+    background: var(--successBgColor, $successBgColor);
+    color: var(--successFontColor, $successFontColor);
+  }
+  &.info {
+    background: var(--infoBgColor, $infoFontColor);
+    color: var(--infoFontColor, $infoFontColor);
+  }
+}
+
 .asm-button {
   background: var(--defaultButtonBgColor, $defaultButtonBgColor);
   border: var(--defaultButtonBorder, $defaultButtonBorder);
   color: var(--defaultButtonFontColor, $defaultButtonFontColor);
   border-radius: var(--buttonBorderRadius, $buttonBorderRadius);
   padding: var(--buttonPadding, $buttonPadding);
+  font-size: var(--buttonFontSize, $buttonFontSize);
+  min-width: var(--buttonMinWidth, $buttonMinWidth);
+  letter-spacing: var(--buttonLetterSpacing, $buttonLetterSpacing);
+  line-height: var(--buttonLineHeight, $buttonLineHeight);
   &:hover,
   &:focus {
     background: var(--defaultButtonHoverBgColor, $defaultButtonHoverBgColor);
@@ -429,6 +499,29 @@ $iframeBorder: $border;
       background: var(--primaryButtonHoverBgColor, $primaryButtonHoverBgColor);
       border: var(--primaryButtonHoverBorder, $primaryButtonHoverBorder);
       color: var(--primaryButtonHoverFontColor, $primaryButtonHoverFontColor);
+    }
+  }
+  &.asm-button-primary-neutral {
+    background: var(
+      --primaryNeutralButtonBgColor,
+      $primaryNeutralButtonBgColor
+    );
+    border: var(--primaryNeutralButtonBorder, $primaryNeutralButtonBorder);
+    color: var(--primaryNeutralButtonFontColor, $primaryNeutralButtonFontColor);
+    &:hover,
+    &:focus {
+      background: var(
+        --primaryNeutralButtonHoverBgColor,
+        $primaryNeutralButtonHoverBgColor
+      );
+      border: var(
+        --primaryNeutralButtonHoverBorder,
+        $primaryNeutralButtonHoverBorder
+      );
+      color: var(
+        --primaryNeutralButtonHoverFontColor,
+        $primaryNeutralButtonHoverFontColor
+      );
     }
   }
   &.asm-button-basic {
@@ -462,223 +555,373 @@ $iframeBorder: $border;
   }
 }
 
-.label + .asm-checkbox{
-  margin-top: 0.75rem;
-}
-
-.asm-checkbox{
+.asm-checkbox {
   display: inline-flex;
-  align-items: center;
-  height: 1.25rem;
-  cursor: pointer;
+  flex-direction: row-reverse;
+  input {
+    padding: 1px 3px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: var(--inputBorder, $inputBorder);
+    &:checked {
+      border: none;
+      background: var(--checkboxBgColor, $checkboxBgColor);
+      &::after {
+        content: "✓";
+        color: var(--checkboxCheckColor, $checkboxCheckColor);
+      }
+    }
+    &:disabled {
+      background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+  }
 }
 
-.asm-checkbox .label{
-  margin-bottom: 0;
-  margin-left: 0.5rem;
+.asm-datepicker {
+  input {
+    color: var(--inputFontColor, $inputFontColor);
+    border: var(--inputBorder, $inputBorder);
+    border-radius: var(--borderRadius, $borderRadius);
+    padding: var(--inputPadding, $inputPadding);
+    &:disabled {
+      background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+  }
 }
 
-.asm-checkbox input{
-  cursor: pointer;
+.asm-divider {
+  border-bottom: var(--dividerBorder, $dividerBorder);
+  margin-top: var(--dividerMargin, $dividerMargin);
+  margin-bottom: var(--dividerMargin, $dividerMargin);
 }
 
-.asm-checkbox input[type="checkbox"]{
-  width: 1rem;
-  height: 1rem;
-  background-color: rgba(var(--fill));
-  border-width: 1px;
-  border-radius: 4px;
-  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
+.asm-heading {
+  margin-top: var(--headingTopMargin, $headingTopMargin);
+  margin-bottom: var(--headingBottomMargin, $headingBottomMargin);
+  color: var(--headingFontColor, $headingFontColor);
+  &.h1 {
+    font-size: var(--h1FontSize, $h1FontSize);
+  }
+  &.h2 {
+    font-size: var(--h2FontSize, $h2FontSize);
+  }
+  &.h3 {
+    font-size: var(--h3FontSize, $h3FontSize);
+  }
+  &.h4 {
+    font-size: var(--h4FontSize, $h4FontSize);
+  }
+  &.h5 {
+    font-size: var(--h5FontSize, $h5FontSize);
+  }
+  &.h6 {
+    font-size: var(--h6FontSize, $h6FontSize);
+  }
+  &.bold {
+    font-weight: bold;
+  }
+  &.italic {
+    font-style: italic;
+  }
 }
 
-.asm-checkbox input[type="checkbox"]:disabled,.asm-checkbox input[type="checkbox"]:disabled:checked{
-  opacity: .4;
-  cursor: not-allowed;
+.asm-icon-label-pair {
+  figure {
+    position: relative;
+    margin-right: 5px;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.asm-checkbox input[type="checkbox"]:checked{
-  background-color: rgba(var(--fill-primary, var(--primary)));
-  border-color: rgba(var(--fill-primary, var(--primary)));
-  position: relative;
-  box-shadow: none;
+.asm-icon {
+  .fill {
+    svg {
+      fill: current-color;
+    }
+  }
+  .stroke {
+    svg {
+      stroke: current-color;
+    }
+  }
+  &.mini {
+    height: var(--miniIconSize, $miniIconSize);
+    width: var(--miniIconSize, $miniIconSize);
+  }
+  &.tiny {
+    height: var(--tinyIconSize, $tinyIconSize);
+    width: var(--tinyIconSize, $tinyIconSize);
+  }
+  &.small {
+    height: var(--smallIconSize, $smallIconSize);
+    width: var(--smallIconSize, $smallIconSize);
+  }
+  &.large {
+    height: var(--largeIconSize, $largeIconSize);
+    width: var(--largeIconSize, $largeIconSize);
+  }
+  &.big {
+    height: var(--bigIconSize, $bigIconSize);
+    width: var(--bigIconSize, $bigIconSize);
+  }
+  &.huge {
+    height: var(--hugeIconSize, $hugeIconSize);
+    width: var(--hugeIconSize, $hugeIconSize);
+  }
+  &.massive {
+    height: var(--massiveIconSize, $massiveIconSize);
+    width: var(--massiveIconSize, $massiveIconSize);
+  }
 }
 
-.asm-checkbox input[type="checkbox"]:checked::after{
-  font-family: "SF Pro Icons";
-  font-size: 0.875rem;
-  position: absolute;
+.asm-iframe {
+  border: var(--iframeBorder, $iframeBorder);
+}
+
+.asm-image-upload {
+  input[type="file"] {
+    color: var(--labelFontColor, $labelFontColor);
+    &::file-selector-button {
+      border: var(--primaryButtonBorder, $primaryButtonBorder);
+      border-radius: var(--borderRadius, $borderRadius);
+      padding: var(--buttonPadding, $buttonPadding);
+      background: var(--primaryButtonBgColor, $primaryButtonBgColor);
+      color: var(--primaryButtonFontColor, $primaryButtonFontColor);
+      &:hover,
+      &:focus {
+        color: var(--primaryButtonHoverFontColor, $primaryButtonHoverFontColor);
+        background: var(
+          --primaryButtonHoverBgColor,
+          $primaryButtonHoverBgColor
+        );
+        border: var(--primaryButtonHoverBorder, $primaryButtonHoverBorder);
+      }
+    }
+  }
+}
+
+.asm-input {
+  input {
+    border: var(--inputBorder, $inputBorder);
+    border-radius: var(--inputBorderRadius, $inputBorderRadius);
+    padding: var(--inputPadding, $inputPadding);
+    color: var(--inputFontColor, $inputFontColor);
+    background: var(--inputBgColor, $inputBgColor);
+    width: var(--inputWidth, $inputWidth);
+    &:hover,
+    &:focus {
+      border: var(--inputFocusBorder, $inputFocusBorder);
+    }
+    &:disabled {
+      background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+    &[type="color"] {
+      padding: 0;
+      border: none;
+      width: 20px;
+      height: 24px;
+    }
+    &[type="range"] {
+      -webkit-appearance: slider-horizontal;
+         -moz-appearance: slider-horizontal;
+              appearance: slider-horizontal;
+    }
+    &::-moz-placeholder {
+      color: var(--inputPlaceholderColor, $inputPlaceholderColor);
+    }
+    &::placeholder {
+      color: var(--inputPlaceholderColor, $inputPlaceholderColor);
+    }
+  }
+}
+
+.asm-label {
   display: block;
-  width: 1rem;
-  height: 1rem;
-  font-weight: 600;
-  line-height: 1rem;
-  text-align: center;
-  content: "";
-  color: #fff;
-  left: -1px;
-  top: -2px;
+  margin: var(--labelMargin, $labelMargin);
+  color: var(--labelFontColor, $labelFontColor);
 }
 
-.asm-checkbox input[type="checkbox"]:focus{
-  box-shadow: 0 0 0 3px rgba(var(--fill-primary, var(--primary)), 0.35);
-  border-color: rgba(var(--fill-primary, var(--primary)));
-  outline: 0;
+.asm-modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--modalOverlayBgColor, $modalOverlayBgColor);
+  z-index: 9999;
+  .asm-modal {
+    position: relative;
+    z-index: 1000;
+    background: var(--modalBgColor, $modalBgColor);
+    margin: 5vh 15vw;
+    height: 90vh;
+    border-radius: var(--modalBorderRadius, $modalBorderRadius);
+    .asm-modal-content {
+      padding: var(--modalPadding, $modalPadding);
+      height: inherit;
+    }
+    .modal-close,
+    .asm-modal-close-button {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      padding: 5px;
+      border-radius: 5000px;
+      background: var(--modalCloseButtonBgColor, $modalCloseButtonBgColor);
+      border: var(--modalCloseButtonBorder, $modalCloseButtonBorder);
+      color: var(--modalCloseButtonFontColor, $modalCloseButtonFontColor);
+      &:hover,
+      &:focus {
+        background: var(
+          --modalCloseButtonHoverBgColor,
+          $modalCloseButtonHoverBgColor
+        );
+        color: var(
+          --modalCloseButtonHoverFontColor,
+          $modalCloseButtonHoverFontColor
+        );
+        border: var(
+          --modalCloseButtonHoverBorder,
+          $modalCloseButtonHoverBorder
+        );
+      }
+      .asm-icon.small {
+        color: black;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
 }
 
-.asm-checkbox input[type="checkbox"]:disabled:checked{
-  background-color: rgba(var(--fill-gray-secondary));
-  border-color: rgba(var(--fill-gray-secondary));
-}
-
-.asm-checkbox.disabled{
-  cursor: not-allowed;
-}
-
-.asm-checkbox.disabled .label{
-  border-color: rgba(var(--fill-gray-secondary));
-  color: rgba(var(--glyph-gray-tertiary));
-  cursor: not-allowed;
-}
-
-.asm-input{
-  font-size: 1rem;
-  color: rgba(var(--glyph-gray));
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  line-height: 1.25rem;
-  background-color: rgba(var(--fill));
-  border-width: 1px;
-  border-radius: 6px;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.asm-input::-moz-placeholder{
-  color: rgba(var(--glyph-gray-tertiary));
-}
-
-.asm-input::placeholder{
-  color: rgba(var(--glyph-gray-tertiary));
-}
-
-.asm-input:disabled{
-  opacity: .4;
-  background-color: rgba(var(--fill-tertiary));
-  cursor: not-allowed;
-}
-
-.asm-input:focus{
-  border-color: rgba(var(--fill-primary, var(--primary)));
-  box-shadow: 0 0 0 3px rgba(var(--fill-primary, var(--primary)), 0.5);
-  outline: 0;
-}
-
-.asm-input:-moz-read-only{
-  background-color: rgba(var(--fill-tertiary));
-}
-
-.asm-input:read-only{
-  background-color: rgba(var(--fill-tertiary));
-}
-
-.asm-input.error{
-  border-color: rgba(var(--fill-red));
-  background-color: rgba(var(--fill-red-secondary));
-}
-
-.asm-input.error:focus{
-  box-shadow: 0 0 0 3px rgba(227, 0, 0, 0.35);
-  outline: 0;
-}
-
-.input-search .asm-input{
-  padding-left: 2.2rem;
-}
-
-.input-search.input-search-sm .asm-input{
-  font-size: 0.75rem;
-  padding-left: 1.8rem;
-  padding-right: 0.5rem;
-  line-height: 1rem;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  height: 1.5rem;
-}
-
-.select .asm-input{
-  display: block;
-  width: 100%;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  background-color: rgba(var(--fill));
-  border-radius: 6px;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.select-sm .asm-input{
-  font-size: 0.75rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  line-height: 1rem;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-.asm-label{
-  color: rgba(var(--glyph-gray));
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.asm-label + .checkbox,.asm-label + .radio{
-  margin-top: 0.75rem;
-}
-
-.checkbox .asm-label, .radio .asm-label{
-  margin-bottom: 0;
-  margin-left: 0.5rem;
-}
-
-.checkbox.disabled .asm-label, .radio.disabled .asm-label{
-  border-color: rgba(var(--fill-gray-secondary));
-  color: rgba(var(--glyph-gray-tertiary));
-  cursor: not-allowed;
-}
-
-.asm-modal{
-  border-color: rgba(var(--fill-gray-quaternary));
-  border-radius: 12px;
-  position: absolute;
+.asm-radio-button {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 640px;
-  background-color: rgba(var(--fill));
-  border-width: 1px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  input {
+    padding: 0;
+    border: none;
+    width: 20px;
+    height: 24px;
+    -webkit-appearance: radio;
+       -moz-appearance: radio;
+            appearance: radio;
+    margin-right: 5px;
+    &:disabled {
+      background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+  }
 }
 
-@keyframes spin{
-  to{
+.asm-radio-button-group-fieldset {
+  color: var(--labelFontColor, $labelFontColor);
+  border: var(--inputBorder, $inputBorder);
+  border-radius: var(--borderRadius, $borderRadius);
+  padding: 5px;
+  legend {
+    padding: 0 5px;
+  }
+  .asm-radio-button-group {
+    padding: 5px;
+  }
+}
+
+/* Spinner Keyframes */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
     transform: rotate(360deg);
   }
 }
 
-.asm-spinner{
-  animation: spin 1s linear infinite;
-  border-radius: 9999px;
+.asm-spinner {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.asm-table {
+  width: 100%;
+  border: var(--tableBorder, $tableBorder);
+  color: var(--bodyFontColor, $bodyFontColor);
+  .asm-table-header {
+    border-bottom: var(--tableBorder, $tableBorder);
+    .asm-table-header-column {
+      cursor: default;
+      padding: var(--tablePadding, $tablePadding);
+    }
+  }
+  .asm-table-body {
+    .asm-table-body-column {
+      padding: var(--tablePadding, $tablePadding);
+    }
+  }
+  .asm-table-footer {
+    border-top: var(--tableBorder, $tableBorder);
+    .asm-table-body-column {
+      padding: var(--tablePadding, $tablePadding);
+    }
+  }
+}
+
+.asm-text {
+  line-height: var(--bodyLineHeight, $bodyLineHeight);
+  color: var(--bodyFontColor, $bodyFontColor);
+  &.p {
+    font-size: var(--bodyFontSize, $bodyFontSize);
+  }
+  &.span {
+    font-size: var(--bodyFontSize, $bodyFontSize);
+  }
+  &.span {
+    font-size: var(--bodyFontSize, $bodyFontSize);
+  }
+  &.pre {
+    white-space: pre-wrap;
+    -moz-tab-size: 2;
+      -o-tab-size: 2;
+         tab-size: 2;
+    font-size: var(--bodyFontSize, $bodyFontSize);
+  }
+  &.code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: var(--codeFontSize, $codeFontSize);
+    display: inline-block;
+    padding: 10px;
+    background: #333;
+    color: #ddd;
+    line-height: 1.5;
+    border-radius: var(--borderRadius, $borderRadius);
+    white-space: pre-wrap;
+    -moz-tab-size: 2;
+      -o-tab-size: 2;
+         tab-size: 2;
+  }
+  &.figcaption {
+    font-size: var(--captionFontSize, $captionFontSize);
+    font-style: italic;
+  }
+  &.bold {
+    font-weight: bold;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
+
+.asm-video {
+  border-radius: 20px;
 }
