@@ -128,6 +128,12 @@
   display: inline-flex;
   flex-direction: row-reverse;
 
+  .asm-label {
+    position: relative;
+    top: 3px;
+    left: 0px;
+  }
+
   input {
     padding: 1px 3px;
     width: 20px;
@@ -153,6 +159,8 @@
 }
 
 .asm-datepicker {
+  position: relative;
+
   input {
     color: var(--inputFontColor, $inputFontColor);
     border: var(--inputBorder, $inputBorder);
@@ -161,6 +169,66 @@
 
     &:disabled {
       background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+  }
+
+  .asm-label {
+  }
+
+  .react-datepicker-wrapper {
+  }
+
+  .react-datepicker__tab-loop {
+    .react-datepicker-popper {
+      width: 300px;
+
+      .react-datepicker {
+        width: 100%;
+
+        .react-datepicker__aria-live {
+          display: none;
+        }
+
+        .react-datepicker__navigation--previous {
+          left: 70%;
+        }
+      }
+
+      &[data-placement^="bottom"] {
+        padding-top: 0px;
+      }
+    }
+  }
+
+  .react-datepicker__triangle {
+    display: none;
+  }
+
+  .react-datepicker__month-container {
+    width: 100%;
+
+    .react-datepicker__header {
+      background-color: white;
+      border-bottom: none;
+
+      .react-datepicker__current-month {
+        text-align: left;
+        margin-left: 2.5%;
+      }
+
+      .react-datepicker__day-names {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .react-datepicker__month {
+      margin: 0px;
+
+      .react-datepicker__week {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
@@ -301,6 +369,8 @@
 }
 
 .asm-input {
+  position: relative;
+
   input {
     border: var(--inputBorder, $inputBorder);
     border-radius: var(--inputBorderRadius, $inputBorderRadius);
@@ -308,10 +378,11 @@
     color: var(--inputFontColor, $inputFontColor);
     background: var(--inputBgColor, $inputBgColor);
     width: var(--inputWidth, $inputWidth);
+    font-size: var(--inputFontSize, $inputFontSize);
 
     &:hover,
     &:focus {
-      border: var(--inputFocusBorder, $inputFocusBorder);
+      outline: var(--inputFocusBorder, $inputFocusBorder);
     }
 
     &:disabled {
@@ -333,12 +404,6 @@
       color: var(--inputPlaceholderColor, $inputPlaceholderColor);
     }
   }
-}
-
-.asm-label {
-  display: block;
-  margin: var(--labelMargin, $labelMargin);
-  color: var(--labelFontColor, $labelFontColor);
 }
 
 .asm-modal-overlay {
@@ -404,6 +469,12 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-end;
+
+  .asm-label {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
 
   input {
     padding: 0;
@@ -531,4 +602,20 @@
 
 .asm-video {
   border-radius: 20px;
+}
+
+.asm-label {
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  color: var(--labelFontColor, $labelFontColor);
+  font-size: var(--labelFontSize, $labelFontSize);
+
+  &[for="color"],
+  &[for="range"],
+  &[for="input"],
+  &[for="imgup"] {
+    position: static;
+  }
 }

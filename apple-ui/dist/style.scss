@@ -121,16 +121,6 @@ pre {
   all: revert;
 }
 
-:focus {
-  outline: 1px solid #333;
-  outline-offset: 1px;
-}
-
-:focus-visible {
-  outline: 1px solid #333;
-  outline-offset: 1px;
-}
-
 :root {
   /* Global */
   --borderRadius: 5px;
@@ -192,14 +182,16 @@ pre {
   --hugeIconSize: 56px;
   --massiveIconSize: 80px;
   /* Inputs */
-  --labelFontColor: #333;
+  --labelFontColor: gray;
+  --labelFontSize: 10px;
   --labelMargin: 0 0 3px 0;
   --inputBgColor: white;
-  --inputPadding: 20px;
+  --inputPadding: 22px 8px 6px 8px;
+  --inputFontSize: 1rem;
   --inputBorder: 1px solid #c7c7c7;
-  --inputFocusBorder: 1px solid #333;
+  --inputFocusBorder: 4px solid #5E9ED6;
   --inputFontColor: #333;
-  --inputDisabledBgColor: #ddd;
+  --inputDisabledBgColor: #fafafa;
   --checkboxBgColor: #0000ff80;
   --checkboxCheckColor: #ddd;
   --inputWidth: 500px;
@@ -366,21 +358,25 @@ $massiveIconSize: 80px;
 
 /* Inputs */
 
-$labelFontColor: #333;
+$labelFontColor: gray;
+
+$labelFontSize: 10px;
 
 $labelMargin: 0 0 3px 0;
 
-$inputPadding: 20px;
+$inputPadding: 22px 8px 6px 8px;
+
+$inputFontSize: 1rem;
 
 $inputBgColor: white;
 
 $inputBorder: 1px solid #c7c7c7;
 
-$inputFocusBorder: 1px solid #333;
+$inputFocusBorder: 4px solid #5e9ed6;
 
 $inputFontColor: #333;
 
-$inputDisabledBgColor: #ddd;
+$inputDisabledBgColor: #fafafa;
 
 $checkboxBgColor: #0000ff80;
 
@@ -558,6 +554,11 @@ $iframeBorder: $border;
 .asm-checkbox {
   display: inline-flex;
   flex-direction: row-reverse;
+  .asm-label {
+    position: relative;
+    top: 3px;
+    left: 0px;
+  }
   input {
     padding: 1px 3px;
     width: 20px;
@@ -580,6 +581,7 @@ $iframeBorder: $border;
 }
 
 .asm-datepicker {
+  position: relative;
   input {
     color: var(--inputFontColor, $inputFontColor);
     border: var(--inputBorder, $inputBorder);
@@ -587,6 +589,52 @@ $iframeBorder: $border;
     padding: var(--inputPadding, $inputPadding);
     &:disabled {
       background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+  }
+  .asm-label {
+  }
+  .react-datepicker-wrapper {
+  }
+  .react-datepicker__tab-loop {
+    .react-datepicker-popper {
+      width: 300px;
+      .react-datepicker {
+        width: 100%;
+        .react-datepicker__aria-live {
+          display: none;
+        }
+        .react-datepicker__navigation--previous {
+          left: 70%;
+        }
+      }
+      &[data-placement^="bottom"] {
+        padding-top: 0px;
+      }
+    }
+  }
+  .react-datepicker__triangle {
+    display: none;
+  }
+  .react-datepicker__month-container {
+    width: 100%;
+    .react-datepicker__header {
+      background-color: white;
+      border-bottom: none;
+      .react-datepicker__current-month {
+        text-align: left;
+        margin-left: 2.5%;
+      }
+      .react-datepicker__day-names {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .react-datepicker__month {
+      margin: 0px;
+      .react-datepicker__week {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
@@ -708,6 +756,7 @@ $iframeBorder: $border;
 }
 
 .asm-input {
+  position: relative;
   input {
     border: var(--inputBorder, $inputBorder);
     border-radius: var(--inputBorderRadius, $inputBorderRadius);
@@ -715,9 +764,10 @@ $iframeBorder: $border;
     color: var(--inputFontColor, $inputFontColor);
     background: var(--inputBgColor, $inputBgColor);
     width: var(--inputWidth, $inputWidth);
+    font-size: var(--inputFontSize, $inputFontSize);
     &:hover,
     &:focus {
-      border: var(--inputFocusBorder, $inputFocusBorder);
+      outline: var(--inputFocusBorder, $inputFocusBorder);
     }
     &:disabled {
       background: var(--inputDisabledBgColor, $inputDisabledBgColor);
@@ -740,12 +790,6 @@ $iframeBorder: $border;
       color: var(--inputPlaceholderColor, $inputPlaceholderColor);
     }
   }
-}
-
-.asm-label {
-  display: block;
-  margin: var(--labelMargin, $labelMargin);
-  color: var(--labelFontColor, $labelFontColor);
 }
 
 .asm-modal-overlay {
@@ -806,6 +850,11 @@ $iframeBorder: $border;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-end;
+  .asm-label {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
   input {
     padding: 0;
     border: none;
@@ -924,4 +973,19 @@ $iframeBorder: $border;
 
 .asm-video {
   border-radius: 20px;
+}
+
+.asm-label {
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  color: var(--labelFontColor, $labelFontColor);
+  font-size: var(--labelFontSize, $labelFontSize);
+  &[for="color"],
+  &[for="range"],
+  &[for="input"],
+  &[for="imgup"] {
+    position: static;
+  }
 }

@@ -81,15 +81,17 @@ $hugeIconSize: 56px;
 $massiveIconSize: 80px;
 
 /* Inputs */
-$labelFontColor: #333;
+$labelFontColor: gray;
+$labelFontSize: 10px;
 $labelMargin: 0 0 3px 0;
 
-$inputPadding: 20px;
+$inputPadding: 22px 8px 6px 8px;
+$inputFontSize: 1rem;
 $inputBgColor: white;
 $inputBorder: 1px solid #c7c7c7;
-$inputFocusBorder: 1px solid #333;
+$inputFocusBorder: 4px solid #5e9ed6;
 $inputFontColor: #333;
-$inputDisabledBgColor: #ddd;
+$inputDisabledBgColor: #fafafa;
 $checkboxBgColor: #0000ff80;
 $checkboxCheckColor: #ddd;
 $inputWidth: 500px;
