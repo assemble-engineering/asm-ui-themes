@@ -1,6 +1,6 @@
 .asm-input,
-.asm-input-with-left-icon,
-.asm-input-with-right-icon {
+.asm-input-icon-left,
+.asm-input-icon-right {
   position: relative;
   width: var(--inputWidth, $inputWidth);
 
@@ -56,13 +56,13 @@
     }
   }
 
-  .asm-label-sticky {
-    display: block;
-    position: absolute;
-    translate: 1px -10px;
-    color: var(--labelFontColor, $labelFontColor);
-    font-size: var(--labelFontSize, $labelFontSize);
-  }
+  // .asm-label-sticky {
+  //   display: block;
+  //   position: absolute;
+  //   translate: 1px -10px;
+  //   color: var(--labelFontColor, $labelFontColor);
+  //   font-size: var(--labelFontSize, $labelFontSize);
+  // }
 
   .input-icon-right {
     position: absolute;
@@ -88,7 +88,7 @@
   }
 }
 
-.asm-input-with-left-icon {
+.asm-input-icon-left {
   input {
     padding-left: 3rem;
     padding-right: 0rem;
@@ -99,7 +99,7 @@
   }
 }
 
-.asm-input-with-right-icon {
+.asm-input-icon-right {
   input {
     padding-right: 3rem;
   }
