@@ -1,0 +1,106 @@
+.asm-input,
+.asm-input-with-left-icon,
+.asm-input-with-right-icon {
+  position: relative;
+  width: var(--inputWidth, $inputWidth);
+
+  input {
+    border: var(--inputBorder, $inputBorder);
+    border-radius: var(--inputBorderRadius, $inputBorderRadius);
+    padding: var(--inputPadding, $inputPadding);
+    color: var(--inputFontColor, $inputFontColor);
+    background: var(--inputBgColor, $inputBgColor);
+    width: var(--inputWidth, $inputWidth);
+    height: var(--inputHeight, $inputHeight);
+    font-size: var(--inputFontSize, $inputFontSize);
+
+    &:focus {
+      outline: var(--inputFocusBorder, $inputFocusBorder);
+    }
+
+    &:disabled {
+      background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+
+    &[type="color"] {
+      padding: 0;
+      border: none;
+      width: 20px;
+      height: 24px;
+    }
+
+    &[type="range"] {
+      appearance: slider-horizontal;
+    }
+
+    &::placeholder {
+      color: var(--inputPlaceholderColor, $inputPlaceholderColor);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    font-size: 17px;
+    transition: translate 150ms ease-in-out, font-size 150ms ease-in-out;
+  }
+
+  &:focus-within {
+    label {
+      display: block;
+      position: absolute;
+      translate: 1px -10px;
+      color: var(--labelFontColor, $labelFontColor);
+      font-size: var(--labelFontSize, $labelFontSize);
+    }
+  }
+
+  .asm-label-sticky {
+    display: block;
+    position: absolute;
+    translate: 1px -10px;
+    color: var(--labelFontColor, $labelFontColor);
+    font-size: var(--labelFontSize, $labelFontSize);
+  }
+
+  .input-icon-right {
+    position: absolute;
+    top: var(--inputIconTopPadding, $inputIconTopPadding);
+    right: var(--inputIconLeftRightPadding, $inputIconLeftRightPadding);
+  }
+
+  .input-icon-left {
+    position: absolute;
+    top: var(--inputIconTopPadding, $inputIconTopPadding);
+    left: var(--inputIconLeftRightPadding, $inputIconLeftRightPadding);
+  }
+
+  .asm-icon-pointer {
+    cursor: pointer;
+  }
+
+  .asm-input-error {
+    display: block;
+    margin-top: var(--inputErrorMarginTop, $inputErrorMarginTop);
+    font-size: var(--inputErrorFontSize, $inputErrorFontSize);
+    color: var(--inputErrorColor, $inputErrorColor);
+  }
+}
+
+.asm-input-with-left-icon {
+  input {
+    padding-left: 3rem;
+    padding-right: 0rem;
+  }
+
+  label {
+    left: 3rem;
+  }
+}
+
+.asm-input-with-right-icon {
+  input {
+    padding-right: 3rem;
+  }
+}

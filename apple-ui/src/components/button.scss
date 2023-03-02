@@ -1,0 +1,91 @@
+.asm-button {
+  background: var(--defaultButtonBgColor, $defaultButtonBgColor);
+  border: var(--defaultButtonBorder, $defaultButtonBorder);
+  color: var(--defaultButtonFontColor, $defaultButtonFontColor);
+
+  border-radius: var(--buttonBorderRadius, $buttonBorderRadius);
+  padding: var(--buttonPadding, $buttonPadding);
+  font-size: var(--buttonFontSize, $buttonFontSize);
+  min-width: var(--buttonMinWidth, $buttonMinWidth);
+  letter-spacing: var(--buttonLetterSpacing, $buttonLetterSpacing);
+  line-height: var(--buttonLineHeight, $buttonLineHeight);
+
+  &:hover,
+  &:focus {
+    background: var(--defaultButtonHoverBgColor, $defaultButtonHoverBgColor);
+    border: var(--defaultButtonHoverBorder, $defaultButtonHoverBorder);
+    color: var(--defaultButtonHoverFontColor, $defaultButtonHoverFontColor);
+  }
+
+  &.asm-button-primary {
+    background: var(--primaryButtonBgColor, $primaryButtonBgColor);
+    border: var(--primaryButtonBorder, $primaryButtonBorder);
+    color: var(--primaryButtonFontColor, $primaryButtonFontColor);
+
+    &:hover,
+    &:focus {
+      background: var(--primaryButtonHoverBgColor, $primaryButtonHoverBgColor);
+      border: var(--primaryButtonHoverBorder, $primaryButtonHoverBorder);
+      color: var(--primaryButtonHoverFontColor, $primaryButtonHoverFontColor);
+    }
+  }
+
+  &.asm-button-primary-neutral {
+    background: var(
+      --primaryNeutralButtonBgColor,
+      $primaryNeutralButtonBgColor
+    );
+    border: var(--primaryNeutralButtonBorder, $primaryNeutralButtonBorder);
+    color: var(--primaryNeutralButtonFontColor, $primaryNeutralButtonFontColor);
+
+    &:hover,
+    &:focus {
+      background: var(
+        --primaryNeutralButtonHoverBgColor,
+        $primaryNeutralButtonHoverBgColor
+      );
+      border: var(
+        --primaryNeutralButtonHoverBorder,
+        $primaryNeutralButtonHoverBorder
+      );
+      color: var(
+        --primaryNeutralButtonHoverFontColor,
+        $primaryNeutralButtonHoverFontColor
+      );
+    }
+  }
+
+  &.asm-button-basic {
+    background: var(--basicButtonBgColor, $basicButtonBgColor);
+    border: var(--basicButtonBorder, $basicButtonBorder);
+    color: var(--basicButtonFontColor, $basicButtonFontColor);
+
+    &:hover,
+    &:focus {
+      background: var(--basicButtonHoverBgColor, $basicButtonHoverBgColor);
+      border: var(--basicButtonHoverBorder, $basicButtonHoverBorder);
+      color: var(--basicButtonHoverFontColor, $basicButtonHoverFontColor);
+    }
+  }
+
+  &.asm-button-transparent {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: unset;
+    border-radius: 0;
+    font-size: unset;
+
+    &:hover,
+    &:focus {
+      background: none;
+      border: none;
+      color: unset;
+    }
+  }
+
+  .asm-button-child {
+    pointer-events: none;
+  }
+}

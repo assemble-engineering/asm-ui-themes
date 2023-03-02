@@ -85,18 +85,24 @@ $labelFontColor: gray;
 $labelFontSize: 10px;
 $labelMargin: 0 0 3px 0;
 
-$inputPadding: 22px 8px 6px 8px;
+$inputPadding: 18px 16px 0px 16px;
 $inputFontSize: 1rem;
 $inputBgColor: white;
 $inputBorder: 1px solid #c7c7c7;
-$inputFocusBorder: 4px solid #5e9ed6;
+$inputFocusBorder: 2px solid #0071e3;
 $inputFontColor: #333;
 $inputDisabledBgColor: #fafafa;
 $checkboxBgColor: #0000ff80;
 $checkboxCheckColor: #ddd;
-$inputWidth: 500px;
+$inputWidth: 100%;
+$inputHeight: 3.29412rem;
 $inputBorderRadius: 10px;
 $inputPlaceholderColor: #8c8c91;
+$inputIconTopPadding: 1.17647rem;
+$inputIconLeftRightPadding: 1rem;
+$inputErrorMarginTop: 8px;
+$inputErrorFontSize: 12px;
+$inputErrorColor: #e30000;
 
 /* Alerts */
 $alertPadding: 8px 12px;
