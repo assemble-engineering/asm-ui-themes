@@ -136,6 +136,7 @@
   --datepickerLabelFontSize: 12px;
   --datepickerWidth: 100%;
   --datepickerPopperBorderTop: 0px;
+  --datepickerPopperPaddingBottom: 40px;
 
   --datepickerNavPreviousLeft: 75%;
   --datepickerNavNextLeft: 90%;
@@ -147,6 +148,21 @@
 
   --datepickerDayWidth: 2.2rem;
   --datepickerDayHeight: 2.2rem;
+  --datepickerDayLineHeight: 21px;
+  --datepickerDayWeekendColor: #6e6e73;
+  --datepickerDayOutsideMonthOpacity: 0%;
+  --datepickerDayOutsideMonthPointerEvents: none;
+
+  --datepickerMonthPaddingTop: 12px;
+  --datepickerMonthPaddingBottom: 14px;
+  --datepickerMonthBorderTop: 1px solid #c7c7c7;
+
+  --datepickerSelectedDayColor: #f5f5f7;
+  --datepickerSelectedDayBackgroundColor: #1d1d1f;
+  --datepickerSelectedDayBorderRadius: 50%;
+
+  --datepickerTodayFontWeightOverride: 400;
+
 
 
 
