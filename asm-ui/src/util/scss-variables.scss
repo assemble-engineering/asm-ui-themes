@@ -12,7 +12,8 @@
 $borderRadius: 8px;
 $padding: 10px;
 $dividerColor: #0F061C;
-$border: 1px solid #C3C8D0;
+$borderColor: #C3C8D0;
+$border: 1px solid $borderColor;
 
 // Buttons
 $buttonPadding: 8px 32px;
