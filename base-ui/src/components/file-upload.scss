@@ -1,6 +1,6 @@
 @use '../util/scss-variables' as *;
 
-.asm-image-upload {
+.asm-file-upload {
   input[type=file] {
     color: var(--labelFontColor, $labelFontColor);
 

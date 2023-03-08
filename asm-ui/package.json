@@ -1,7 +1,7 @@
 {
-  "name": "@assemble-inc/base-ui",
-  "version": "1.4.2",
-  "description": "Assemble Base Styles",
+  "name": "@assemble-inc/asm-ui",
+  "version": "1.1.1",
+  "description": "Assemble Brand Styles",
   "author": "Assemble Frontend Team",
   "license": "MIT",
   "main": "./dist/style.css",
@@ -23,8 +23,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "copyfiles -u 1 src/util/css-variables.css dist/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "copyfiles -u 1 src/util/css-variables.css dist/"
   },
   "devDependencies": {
     "@assemble-inc/tsconfig": "*",

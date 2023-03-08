@@ -1,9 +1,10 @@
 :root {
   /* Global */
-  --borderRadius: 5px;
+  --borderRadius: 10px;
   --padding: 10px;
   --dividerColor: #333;
   --border: 1px solid #666;
+  --borderColor: #c7c7c7;
 
   /* Buttons */
   --buttonPadding: 8px 16px;
@@ -121,4 +122,32 @@
   --dividerMargin: 1rem;
   /* Iframe */
   --iframeBorder: var(--border);
+
+  /* Datepicker */
+  --datepickerBorderRadius: 10px;
+  --datepickerInputBorder: 1px solid #c7c7c7;
+  --datepickerInputFontColor: #333;
+  --datepickerInputPadding: 18px 49px 0px 16px;
+  --datepickerInputHeight: 56px;
+
+  --datepickerInputFocusBorder: 2px solid blue;
+  --datepickerInputFocusBorderBottom: 0px;
+  
+  --datepickerLabelFontSize: 12px;
+  --datepickerWidth: 100%;
+  --datepickerPopperBorderTop: 0px;
+
+  --datepickerNavPreviousLeft: 75%;
+  --datepickerNavNextLeft: 90%;
+  --datepickerNavTop: 16px;
+
+  --datepickerMargin: 16px;
+  --datepickerLargeFont: 17px;
+  --datepickerSmallFont: 12px;
+
+  --datepickerDayWidth: 2.2rem;
+  --datepickerDayHeight: 2.2rem;
+
+
+
 }

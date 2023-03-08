@@ -1,0 +1,29 @@
+@use '../util/scss-variables' as *;
+
+.asm-drag-zone {
+  border: 1px dashed var(--borderColor, $borderColor);
+  border-radius: var(--borderRadius, $borderRadius);
+  padding: var(--padding, $padding);
+  text-align: center;
+}
+
+.asm-file-upload {
+  input[type=file] {
+    color: var(--labelFontColor, $labelFontColor);
+
+    &::file-selector-button {
+      border: var(--basicButtonBorder, $basicButtonBorder);
+      border-radius: var(--borderRadius, $borderRadius);
+      padding: var(--buttonPadding, $buttonPadding);
+      background: var(--basicButtonBgColor, $basicButtonBgColor);
+      color: var(--basicButtonFontColor, $basicButtonFontColor);
+
+      &:hover,
+      &:focus {
+        color: var(--basicButtonHoverFontColor, $basicButtonHoverFontColor);
+        background: var(--basicButtonHoverBgColor, $basicButtonHoverBgColor);
+        border: var(--basicButtonHoverBorder, $basicButtonHoverBorder);
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .asm-input,
 .asm-input-icon-left,
-.asm-input-icon-right {
+.asm-input-icon-right,
+.asm-input-group {
   position: relative;
   width: var(--inputWidth, $inputWidth);
 
@@ -56,15 +57,13 @@
     }
   }
 
-  /*
   .asm-label-sticky {
     display: block;
     position: absolute;
     translate: 1px -10px;
     color: var(--labelFontColor, $labelFontColor);
     font-size: var(--labelFontSize, $labelFontSize);
-  } 
-*/
+  }
 
   .input-icon-right {
     position: absolute;
@@ -88,6 +87,13 @@
     font-size: var(--inputErrorFontSize, $inputErrorFontSize);
     color: var(--inputErrorColor, $inputErrorColor);
   }
+
+  textarea {
+    width: 100%;
+    border: var(--inputBorder, $inputBorder);
+    border-radius: var(--inputBorderRadius, $inputBorderRadius);
+    resize: both;
+  }
 }
 
 .asm-input-icon-left {
@@ -104,5 +110,28 @@
 .asm-input-icon-right {
   input {
     padding-right: 3rem;
+  }
+}
+
+.asm-input-group {
+  border: var(--inputBorder, $inputBorder);
+  border-radius: var(--inputBorderRadius, $inputBorderRadius);
+  overflow: hidden;
+  position: relative;
+
+  input:nth-child(1) {
+    border: none;
+    border-bottom: var(--inputBorder, $inputBorder);
+    border-radius: 0px;
+    outline: none;
+  }
+
+  input:nth-child(2) {
+    border: none;
+    outline: none;
+  }
+
+  &:focus-within {
+    outline: var(--inputFocusBorder, $inputFocusBorder);
   }
 }

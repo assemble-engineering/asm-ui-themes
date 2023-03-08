@@ -1,4 +1,4 @@
-# @asm/base-ui
+# @assemble-inc/base-ui
 
 ## 1.1.5
 
