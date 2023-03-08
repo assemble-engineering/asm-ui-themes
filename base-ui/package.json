@@ -1,7 +1,7 @@
 {
   "name": "@assemble-inc/base-ui",
   "version": "1.2.15",
-  "description": "Assemble Base Styles Using TailwindCSS",
+  "description": "Assemble Base Styles",
   "author": "Assemble Frontend Team",
   "license": "MIT",
   "main": "./dist/style.css",
@@ -26,6 +26,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@assemble-inc/tsconfig": "*",
+    "typescript": "^4.9.5",
     "vite": "^4.1.0"
   },
   "dependencies": {

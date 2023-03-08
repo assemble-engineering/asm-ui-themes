@@ -1,0 +1,117 @@
+// Fallback values for CSS variables
+// This pattern allows us a simple way
+// to overwrite the default stylesheet's
+// variable definitions by defining a CSS variable
+// to a value that does not exist by supplying
+// these variables as fallback values
+
+// To overwrite them, simply add a file with
+// the variables in css-variables.css to your repo
+
+// Global
+$borderRadius: 8px;
+$padding: 10px;
+$dividerColor: #0F061C;
+$border: 1px solid #C3C8D0;
+
+// Buttons
+$buttonPadding: 8px 32px;
+$buttonBorderRadius: $borderRadius;
+
+$defaultButtonBgColor: #290C54;
+$defaultButtonFontColor: #fff;
+$defaultButtonBorder: none;
+
+$defaultButtonHoverBgColor: #513081;
+$defaultButtonHoverFontColor: #fff;
+$defaultButtonHoverBorder: none;
+
+$primaryButtonBgColor: #fff;
+$primaryButtonFontColor: #290C54;
+$primaryButtonBorder: 1px solid #290C54;
+
+$primaryButtonHoverBgColor: #fff;
+$primaryButtonHoverFontColor: #513081;
+$primaryButtonHoverBorder: 1px solid #513081;
+
+$basicButtonBgColor:  #C3C8D0;
+$basicButtonFontColor: #290C54;
+$basicButtonBorder: none;
+
+$basicButtonHoverBgColor: #D8DBE1;
+$basicButtonHoverFontColor: #290C54;
+$basicButtonHoverBorder: none;
+
+// Font
+$headingTopMargin: 1.75rem;
+$headingBottomMargin: 1.75rem;
+$headingFontColor: #0F061C;
+$h1FontSize: 4rem;
+$h2FontSize: 2.5rem;
+$h3FontSize: 2rem;
+$h4FontSize: 1.75rem;
+$h5FontSize: 1.375rem;
+$h6FontSize: 1.125rem;
+
+$bodyLineHeight: 1.25;
+$bodyFontSize: 1rem;
+$bodyFontSizeSmall: .875rem;
+$bodyFontSizeLarge: 1.125rem;
+$bodyFontColor: #0F061C;
+$codeFontSize: .875rem;
+$captionFontSize: .875rem;
+
+// Icons
+$miniIconSize: 20px;
+$tinyIconSize: 30px;
+$smallIconSize: 40px;
+$largeIconSize: 50px;
+$bigIconSize: 60px;
+$hugeIconSize: 70px;
+$massiveIconSize: 80px;
+
+// Inputs
+$labelFontColor: #0f061c;
+$labelMargin: 0 0 0 0;
+
+$inputPadding: 12px 16px;
+$inputBgColor: #fff;
+$inputBorder: 1px solid #C3C8D0;
+$inputFocusBorder: 1px solid #0F061C;
+$inputFontColor: #0F061C;
+$inputDisabledBgColor: #ddd;
+$checkboxBgColor: #290C54;
+$checkboxCheckColor: #fff;
+
+// Alerts
+$alertPadding: 15px 20px;
+$warningBgColor: #fafafa;
+$warningFontColor: #8c8c00;
+$successBgColor: #fafafa;
+$successFontColor: #07B30E;
+$errorBgColor: #fafafa;
+$errorFontColor: #dd0000;
+$infoBgColor: #fafafa;
+$infoFontColor: #0F061C;
+
+// Modal
+$modalPadding: 80px 20px 20px;
+$modalBgColor: #fafafa;
+$modalOverlayBgColor: rgba(15, 6, 28, .5);
+$modalCloseButtonBgColor: $defaultButtonBgColor;
+$modalCloseButtonBorder: $defaultButtonBorder;
+$modalCloseButtonHoverBorder:$defaultButtonBorder;
+$modalCloseButtonFontColor: $defaultButtonFontColor;
+$modalCloseButtonHoverBgColor: $defaultButtonHoverBgColor;
+$modalCloseButtonHoverFontColor: $defaultButtonHoverFontColor;
+
+// Table
+$tablePadding: 12px 15px;
+$tableBorder: 1px solid #C3C8D0;
+
+// Divider
+$dividerBorder: $border;
+$dividerMargin: 1rem;
+
+// Iframe
+$iframeBorder: $border;
