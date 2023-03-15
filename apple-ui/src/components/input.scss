@@ -86,6 +86,10 @@
     border-radius: var(--inputBorderRadius, $inputBorderRadius);
     resize: both;
   }
+
+  input[type="month"] ::after {
+    background-color: blue;
+  }
 }
 
 .asm-input-icon-left {
