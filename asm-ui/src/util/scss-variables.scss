@@ -77,8 +77,10 @@ $labelMargin: 0 0 0 0;
 
 $inputPadding: 12px 16px;
 $inputBgColor: #fff;
-$inputBorder: 1px solid #C3C8D0;
-$inputFocusBorder: 1px solid #0F061C;
+$inputBorderColor: #c3c8d0;
+$inputBorder: 1px solid $inputBorderColor;
+$inputFocusBorderColor: #0F061C;
+$inputFocusBorder: 1px solid $inputFocusBorderColor;
 $inputFontColor: #0F061C;
 $inputDisabledBgColor: #ddd;
 $checkboxBgColor: #290C54;

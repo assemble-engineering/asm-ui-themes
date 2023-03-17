@@ -2,7 +2,7 @@
 
 .asm-radio-button-group-fieldset {
   color: var(--labelFontColor, $labelFontColor);
-  border: var(--inputBorder, $inputBorder);
+  border: 1px dashed var(--inputBorderColor, $inputBorderColor);
   border-radius: var(--borderRadius, $borderRadius);
   padding: 5px;
 
