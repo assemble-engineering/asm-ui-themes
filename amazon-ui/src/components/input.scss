@@ -1,31 +1,53 @@
-@use '../util/scss-variables' as *;
+@use "../util/scss-variables" as *;
 
 .asm-input {
   input {
-    border: var(--inputBorder, $inputBorder);
-    border-radius: var(--borderRadius, $borderRadius);
-    padding: var(--inputPadding, $inputPadding);
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
     color: var(--inputFontColor, $inputFontColor);
-    background: var(--inputBgColor, $inputBgColor);
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border: var(--inputFocusBorder, $inputFocusBorder);
+    }
+
+    &:focus {
+      // border-color: #e77600;
+      // box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+      border-color: #007185;
+      box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgb(15 17 17 / 15%) inset;
     }
 
     &:disabled {
       background: var(--inputDisabledBgColor, $inputDisabledBgColor);
     }
 
-    &[type=color] {
+    &[type="color"] {
       padding: 0;
       border: none;
       width: 20px;
       height: 24px;
     }
 
-    &[type=range] {
+    &[type="range"] {
       appearance: slider-horizontal;
     }
+  }
+
+  label {
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
   }
 }

@@ -13,7 +13,7 @@
   --defaultButtonHoverBgColor: #0000ff90;
   --defaultButtonHoverFontColor: #ddd;
   --defaultButtonHoverBorder: none;
-  --primaryButtonBgColor: #ddd;
+  --primaryButtonBgColor: linear-gradient(to bottom,#f7dfa5,#f0c14b);
   --primaryButtonFontColor: #333;
   --primaryButtonBorder: 1px solid #0000ff80;
   --primaryButtonHoverBgColor: #0000ff10;

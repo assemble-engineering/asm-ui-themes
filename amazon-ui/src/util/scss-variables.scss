@@ -26,7 +26,7 @@ $defaultButtonHoverBgColor: #0000ff90;
 $defaultButtonHoverFontColor: #ddd;
 $defaultButtonHoverBorder: none;
 
-$primaryButtonBgColor: #ddd;
+$primaryButtonBgColor: linear-gradient(to bottom, #f7dfa5, #f0c14b);
 $primaryButtonFontColor: #333;
 $primaryButtonBorder: 1px solid #0000ff80;
 
@@ -34,7 +34,7 @@ $primaryButtonHoverBgColor: #0000ff10;
 $primaryButtonHoverFontColor: #333;
 $primaryButtonHoverBorder: 1px solid #0000ff90;
 
-$basicButtonBgColor:  #0000ff30;
+$basicButtonBgColor: #0000ff30;
 $basicButtonFontColor: #333;
 $basicButtonBorder: none;
 
@@ -43,7 +43,7 @@ $basicButtonHoverFontColor: #333;
 $basicButtonHoverBorder: none;
 
 // Font
-$headingTopMargin: .5rem;
+$headingTopMargin: 0.5rem;
 $headingBottomMargin: 1rem;
 $headingFontColor: #333;
 $h1FontSize: 3.5rem;
@@ -55,11 +55,11 @@ $h6FontSize: 1.5rem;
 
 $bodyLineHeight: 1.25;
 $bodyFontSize: 1rem;
-$bodyFontSizeSmall: .875rem;
+$bodyFontSizeSmall: 0.875rem;
 $bodyFontSizeLarge: 1.125rem;
 $bodyFontColor: #333;
-$codeFontSize: .875rem;
-$captionFontSize: .875rem;
+$codeFontSize: 0.875rem;
+$captionFontSize: 0.875rem;
 
 // Icons
 $miniIconSize: 16px;
@@ -85,22 +85,22 @@ $checkboxCheckColor: #ddd;
 
 // Alerts
 $alertPadding: 8px 12px;
-$warningBgColor: rgba(255, 255, 0, .25);
+$warningBgColor: rgba(255, 255, 0, 0.25);
 $warningFontColor: #b2b200;
-$successBgColor: rgba(0, 255, 0, .25);
+$successBgColor: rgba(0, 255, 0, 0.25);
 $successFontColor: #009900;
-$errorBgColor: rgba(255, 0, 0, .25);
+$errorBgColor: rgba(255, 0, 0, 0.25);
 $errorFontColor: #ff0000;
-$infoBgColor: rgb(0, 0, 255, .25);
+$infoBgColor: rgb(0, 0, 255, 0.25);
 $infoFontColor: #0000ff;
 
 // Modal
 $modalPadding: 80px 20px 20px;
 $modalBgColor: #ddd;
-$modalOverlayBgColor: rgba(51, 51, 51, .6);
+$modalOverlayBgColor: rgba(51, 51, 51, 0.6);
 $modalCloseButtonBgColor: $defaultButtonBgColor;
 $modalCloseButtonBorder: $defaultButtonBorder;
-$modalCloseButtonHoverBorder:$defaultButtonBorder;
+$modalCloseButtonHoverBorder: $defaultButtonBorder;
 $modalCloseButtonFontColor: $defaultButtonFontColor;
 $modalCloseButtonHoverBgColor: $defaultButtonHoverBgColor;
 $modalCloseButtonHoverFontColor: $defaultButtonHoverFontColor;
