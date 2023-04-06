@@ -30,7 +30,8 @@
     "@assemble-inc/tsconfig": "*",
     "copyfiles": "^2.4.1",
     "typescript": "^4.9.5",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vite-plugin-static-copy": "^0.13.1"
   },
   "dependencies": {
     "sass": "^1.58.0"
