@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-checkbox {
   display: inline-flex;
   flex-direction: row-reverse;

@@ -22,8 +22,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "postbuild": "copyfiles -u 1 src/util/css-variables.css dist/",
+    "build": "vite build  && sass ./src/components/:./dist/css/",
     "preview": "vite preview"
   },
   "devDependencies": {
