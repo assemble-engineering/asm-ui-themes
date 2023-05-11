@@ -1,0 +1,15 @@
+.asm-label {
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  color: var(--labelFontColor, $labelFontColor);
+  font-size: var(--labelFontSize, $labelFontSize);
+
+  &[for="color"],
+  &[for="range"],
+  &[for="input"],
+  &[for="imgup"] {
+    position: static;
+  }
+}

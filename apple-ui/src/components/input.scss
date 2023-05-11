@@ -1,0 +1,141 @@
+.asm-input,
+.asm-input-icon-left,
+.asm-input-icon-right,
+.asm-input-group {
+  position: relative;
+  width: var(--inputWidth, $inputWidth);
+
+  input {
+    border: var(--inputBorder, $inputBorder);
+    border-radius: var(--inputBorderRadius, $inputBorderRadius);
+    padding: var(--inputPadding, $inputPadding);
+    color: var(--inputFontColor, $inputFontColor);
+    background: var(--inputBgColor, $inputBgColor);
+    width: var(--inputWidth, $inputWidth);
+    height: var(--inputHeight, $inputHeight);
+    font-size: var(--inputFontSize, $inputFontSize);
+
+    &:focus {
+      outline: var(--inputFocusBorder, $inputFocusBorder);
+    }
+
+    &:disabled {
+      background: var(--inputDisabledBgColor, $inputDisabledBgColor);
+    }
+
+    &[type="color"] {
+      padding: 0;
+      border: none;
+      width: 20px;
+      height: 24px;
+    }
+
+    &[type="range"] {
+      appearance: slider-horizontal;
+    }
+
+    &::placeholder {
+      color: var(--inputPlaceholderColor, $inputPlaceholderColor);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    font-size: 17px;
+    transition: translate 150ms ease-in-out, font-size 150ms ease-in-out;
+  }
+
+  &:focus-within {
+    label {
+      display: block;
+      position: absolute;
+      translate: 1px -10px;
+      color: var(--labelFontColor, $labelFontColor);
+      font-size: var(--labelFontSize, $labelFontSize);
+    }
+  }
+
+  .input-icon-right {
+    position: absolute;
+    top: var(--inputIconTopPadding, $inputIconTopPadding);
+    right: var(--inputIconLeftRightPadding, $inputIconLeftRightPadding);
+  }
+
+  .input-icon-left {
+    position: absolute;
+    top: var(--inputIconTopPadding, $inputIconTopPadding);
+    left: var(--inputIconLeftRightPadding, $inputIconLeftRightPadding);
+  }
+
+  .asm-icon-pointer {
+    cursor: pointer;
+  }
+
+  .asm-input-error {
+    display: block;
+    margin-top: var(--inputErrorMarginTop, $inputErrorMarginTop);
+    font-size: var(--inputErrorFontSize, $inputErrorFontSize);
+    color: var(--inputErrorColor, $inputErrorColor);
+  }
+
+  textarea {
+    width: 100%;
+    border: var(--inputBorder, $inputBorder);
+    border-radius: var(--inputBorderRadius, $inputBorderRadius);
+    resize: both;
+  }
+
+  input[type="month"] ::after {
+    background-color: blue;
+  }
+}
+
+.asm-input-icon-left {
+  input {
+    padding-left: 3rem;
+    padding-right: 0rem;
+  }
+
+  label {
+    left: 3rem;
+  }
+}
+
+.asm-input-icon-right {
+  input {
+    padding-right: 3rem;
+  }
+}
+
+.asm-input-group {
+  border: var(--inputBorder, $inputBorder);
+  border-radius: var(--inputBorderRadius, $inputBorderRadius);
+  overflow: hidden;
+  position: relative;
+
+  input:nth-child(1) {
+    border: none;
+    border-bottom: var(--inputBorder, $inputBorder);
+    border-radius: 0px;
+    outline: none;
+  }
+
+  input:nth-child(2) {
+    border: none;
+    outline: none;
+  }
+
+  &:focus-within {
+    outline: var(--inputFocusBorder, $inputFocusBorder);
+  }
+}
+
+.asm-input--dirty label {
+  display: block;
+  position: absolute;
+  translate: 1px -10px;
+  color: var(--labelFontColor, $labelFontColor);
+  font-size: var(--labelFontSize, $labelFontSize);
+}

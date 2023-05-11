@@ -1,28 +1,21 @@
-@import url('//www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Mono,v1|SF+Pro+Icons,v3');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.asm-button {
-  @apply btn;
-}
-
-.asm-checkbox {
-  @apply checkbox;
-}
-
-.asm-input {
-  @apply input;
-}
-
-.asm-label {
-  @apply label;
-}
-
-.asm-modal {
-  @apply modal;
-}
-
-.asm-spinner {
-  @apply rounded-full animate-spin;
-}
+@import "./util/reset.css";
+@import "./util/scss-variables.scss";
+@import "./util/css-variables.css";
+@import "./components/alert.scss";
+@import "./components/button.scss";
+@import "./components/checkbox.scss";
+@import "./components/datepicker.scss";
+@import "./components/divider.scss";
+@import "./components/heading.scss";
+@import "./components/icon.scss";
+@import "./components/icon-label-pair.scss";
+@import "./components/iframe.scss";
+@import "./components/image-upload.scss";
+@import "./components/label.scss";
+@import "./components/modal.scss";
+@import "./components/radio.scss";
+@import "./components/spinner.scss";
+@import "./components/table.scss";
+@import "./components/text.scss";
+@import "./components/video.scss";
+@import "./components/input.scss";
