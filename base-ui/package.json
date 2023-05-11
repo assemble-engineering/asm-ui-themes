@@ -1,6 +1,6 @@
 {
   "name": "@assemble-inc/base-ui",
-  "version": "1.4.3",
+  "version": "1.4.5",
   "description": "Assemble Base Styles",
   "author": "Assemble Frontend Team",
   "license": "MIT",
@@ -18,7 +18,8 @@
     "yarn": ">=1.22.3"
   },
   "files": [
-    "dist/style.css"
+    "dist/style.css",
+    "dist/css"
   ],
   "scripts": {
     "dev": "vite",
