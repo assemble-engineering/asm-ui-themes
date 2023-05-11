@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-radio-button-group-fieldset {
   color: var(--labelFontColor, $labelFontColor);
   border: var(--inputBorder, $inputBorder);

@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-button {
   background: var(--defaultButtonBgColor, $defaultButtonBgColor);
   border: var(--defaultButtonBorder, $defaultButtonBorder);
@@ -31,27 +33,19 @@
   }
 
   &.asm-button-primary-neutral {
-    background: var(
-      --primaryNeutralButtonBgColor,
-      $primaryNeutralButtonBgColor
-    );
+    background: var(--primaryNeutralButtonBgColor,
+        $primaryNeutralButtonBgColor );
     border: var(--primaryNeutralButtonBorder, $primaryNeutralButtonBorder);
     color: var(--primaryNeutralButtonFontColor, $primaryNeutralButtonFontColor);
 
     &:hover,
     &:focus {
-      background: var(
-        --primaryNeutralButtonHoverBgColor,
-        $primaryNeutralButtonHoverBgColor
-      );
-      border: var(
-        --primaryNeutralButtonHoverBorder,
-        $primaryNeutralButtonHoverBorder
-      );
-      color: var(
-        --primaryNeutralButtonHoverFontColor,
-        $primaryNeutralButtonHoverFontColor
-      );
+      background: var(--primaryNeutralButtonHoverBgColor,
+          $primaryNeutralButtonHoverBgColor );
+      border: var(--primaryNeutralButtonHoverBorder,
+          $primaryNeutralButtonHoverBorder );
+      color: var(--primaryNeutralButtonHoverFontColor,
+          $primaryNeutralButtonHoverFontColor );
     }
   }
 

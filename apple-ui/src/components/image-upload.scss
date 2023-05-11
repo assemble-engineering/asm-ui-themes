@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-image-upload {
   input[type="file"] {
     color: var(--labelFontColor, $labelFontColor);
@@ -12,10 +14,8 @@
       &:hover,
       &:focus {
         color: var(--primaryButtonHoverFontColor, $primaryButtonHoverFontColor);
-        background: var(
-          --primaryButtonHoverBgColor,
-          $primaryButtonHoverBgColor
-        );
+        background: var(--primaryButtonHoverBgColor,
+            $primaryButtonHoverBgColor );
         border: var(--primaryButtonHoverBorder, $primaryButtonHoverBorder);
       }
     }

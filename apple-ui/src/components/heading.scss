@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-heading {
   margin-top: var(--headingTopMargin, $headingTopMargin);
   margin-bottom: var(--headingBottomMargin, $headingBottomMargin);

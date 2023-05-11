@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-modal-overlay {
   position: fixed;
   top: 0;
@@ -33,18 +35,12 @@
 
       &:hover,
       &:focus {
-        background: var(
-          --modalCloseButtonHoverBgColor,
-          $modalCloseButtonHoverBgColor
-        );
-        color: var(
-          --modalCloseButtonHoverFontColor,
-          $modalCloseButtonHoverFontColor
-        );
-        border: var(
-          --modalCloseButtonHoverBorder,
-          $modalCloseButtonHoverBorder
-        );
+        background: var(--modalCloseButtonHoverBgColor,
+            $modalCloseButtonHoverBgColor );
+        color: var(--modalCloseButtonHoverFontColor,
+            $modalCloseButtonHoverFontColor );
+        border: var(--modalCloseButtonHoverBorder,
+            $modalCloseButtonHoverBorder );
       }
 
       .asm-icon.small {

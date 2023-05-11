@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-text {
   line-height: var(--bodyLineHeight, $bodyLineHeight);
   color: var(--bodyFontColor, $bodyFontColor);

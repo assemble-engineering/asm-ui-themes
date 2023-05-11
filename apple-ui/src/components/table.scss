@@ -1,3 +1,5 @@
+@use '../util/scss-variables' as *;
+
 .asm-table {
   width: 100%;
   border: var(--tableBorder, $tableBorder);
