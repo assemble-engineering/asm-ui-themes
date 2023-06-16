@@ -1,6 +1,6 @@
 {
   "name": "@assemble-inc/base-ui",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Assemble Base Styles",
   "author": "Assemble Frontend Team",
   "license": "MIT",
@@ -15,7 +15,7 @@
   "engines": {
     "node": "^12.16.0 || ^14.17.0 || >=16.0.0",
     "npm": "please-use-yarn",
-    "yarn": ">=1.22.3"
+    "yarn": "*"
   },
   "files": [
     "dist/style.css",
