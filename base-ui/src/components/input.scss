@@ -8,7 +8,10 @@
     color: var(--inputFontColor, $inputFontColor);
     background: var(--inputBgColor, $inputBgColor);
 
-    &:hover,
+    &:hover {
+      border: var(--inputHoverBorder, $inputHoverBorder);
+    }
+
     &:focus {
       border: var(--inputFocusBorder, $inputFocusBorder);
     }

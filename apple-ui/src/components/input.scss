@@ -17,6 +17,10 @@
     height: var(--inputHeight, $inputHeight);
     font-size: var(--inputFontSize, $inputFontSize);
 
+    &:hover {
+      border: var(--inputHoverBorder, $inputHoverBorder);
+    }
+
     &:focus {
       outline: var(--inputFocusBorder, $inputFocusBorder);
     }

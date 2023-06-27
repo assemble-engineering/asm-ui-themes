@@ -57,8 +57,10 @@
   --inputPadding: 8px 12px;
   --inputBorderColor: #666;
   --inputBorder: 1px solid var(--inputBorderColor);
+  --inputHoverBorderColor: #333;
   --inputFocusBorderColor: #333;
   --inputFocusBorder: 1px solid var(--inputFocusBorderColor);
+  --inputHoverBorder: 1px solid var(--inputHoverBorderColor);
   --inputFontColor: #333;
   --inputDisabledBgColor: #ddd;
   --checkboxBgColor: #0000ff80;

@@ -15,14 +15,11 @@
     outline: 0;
 
     &:hover {
-      border: var(--inputFocusBorder, $inputFocusBorder);
+      border: var(--inputHoverBorder, $inputHoverBorder);
     }
 
     &:focus {
-      // border-color: #e77600;
-      // box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
-      border-color: #007185;
-      box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgb(15 17 17 / 15%) inset;
+      border: var(--inputFocusBorder, $inputFocusBorder);
     }
 
     &:disabled {

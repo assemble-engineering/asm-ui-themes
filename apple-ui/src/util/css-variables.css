@@ -41,7 +41,7 @@
   --basicButtonBgColor:  #f5f5f7;
   --basicButtonFontColor: #000;
   --basicButtonBorder: 1px solid #fff;
-  
+
   --basicButtonHoverBgColor: #fff;
   --basicButtonHoverFontColor: #000;
   --basicButtonHoverBorder: 1px solid #fff;
@@ -78,7 +78,10 @@
   --inputPadding: 18px 16px 0px 16px;
   --inputFontSize: 1rem;
   --inputBorder: 1px solid #c7c7c7;
-  --inputFocusBorder: 2px solid #0071e3;
+  --inputFocusBorderColor: #0071e3;
+  --inputHoverBorderColor: #0071e3;
+  --inputFocusBorder: 2px solid var(--inputFocusBorderColor);
+  --inputHoverBorder: 2px solid var(--inputHoverBorderColor);
   --inputFontColor: #333;
   --inputDisabledBgColor: #fafafa;
   --checkboxBgColor: #0000ff80;
@@ -134,7 +137,7 @@
 
   --datepickerInputFocusBorder: 2px solid blue;
   --datepickerInputFocusBorderBottom: 0px;
-  
+
   --datepickerLabelFontSize: 12px;
   --datepickerWidth: 100%;
   --datepickerPopperBorderTop: 0px;
